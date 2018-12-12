@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	// Public Variable
+	public float force = 100;
+	public Rigidbody rb;
+
+	public void Shoot() {
+		rb.AddForce(rb.gameObject.transform.forward * force, ForceMode.Impulse);
 	}
 }
