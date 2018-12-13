@@ -5,10 +5,12 @@ using UnityEngine;
 public class GroundCheck : MonoBehaviour {
 
 	private bool isGrounded = false;
+	public GameObject ball;
 
 	void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Ground") {
 			isGrounded = true;
+			ball.GetComponent<Hit>().SetFiring(false);
 		}
 	}
 
@@ -21,6 +23,7 @@ public class GroundCheck : MonoBehaviour {
 	void OnTriggerExit(Collider col) {
 		if(col.gameObject.tag == "Ground") {
 			isGrounded = false;
+			ball.GetComponent<Hit>().SetFiring(true);
 		}
 	}
 

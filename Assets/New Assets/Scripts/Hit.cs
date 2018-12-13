@@ -7,19 +7,22 @@ using UnityEngine.UI;
 public class Hit : MonoBehaviour {
 
 	// Public Variable
-	public float force = 100;
+	public float force = 0.0f;
 	public Rigidbody rb;
 	public HoleType hole;
 	public GroundCheck gc;
 	public GameObject beforeFiring;
 	public GameObject currentlyFiring;
 	public Slider powerMeter;
+	public int multiplier = 10;
 	
 	// Private Variables
 	private int score = 0;
 	private float powerCounter = 0.0f;
 	private bool readyToFire = false;
+	private bool pos = true;
 	private bool firing = false;
+	
 
 	void Start() {
 		score = hole.GetPar() * -1;
@@ -28,16 +31,40 @@ public class Hit : MonoBehaviour {
 	}
 
 	void Update() {
-		if(gc.GetGrounded() && !readyToFire) {
+		if(!readyToFire) {
 			beforeFiring.SetActive(true);
 			currentlyFiring.SetActive(false);
-		} else if(gc.GetGrounded() && readyToFire) {
+		} else {
 			beforeFiring.SetActive(false);
 			currentlyFiring.SetActive(true);
+			if(pos) {
+				if(powerCounter < powerMeter.maxValue) {
+					powerCounter += (Time.deltaTime * multiplier);
+					powerMeter.value = powerCounter;
+				} else {
+					
+					multiplier *= -1;
+					pos = false;
+				}
+			} else {
+				if(powerCounter > 0.0f) {
+					powerCounter += (Time.deltaTime * multiplier);
+					powerMeter.value = powerCounter;
+				} else {
+					multiplier *= -1;
+					pos = true;
+				}
+			}
 		}
 	}
 	public void Shoot() {
+		force = powerCounter;
 		rb.AddForce(rb.gameObject.transform.forward * force, ForceMode.Impulse);
+		readyToFire = false;
+	}
+
+	public void Ready() {
+		readyToFire = true;
 	}
 
 	void OnTriggerEnter(Collider col) {
@@ -46,6 +73,10 @@ public class Hit : MonoBehaviour {
 			WhatScore(score, hole.GetPar());
 			SceneManager.LoadScene("Prototype", LoadSceneMode.Single);
 		}
+	}
+
+	public void SetFiring(bool newVal) {
+		firing = newVal;
 	}
 
 	string WhatScore(int points, int par) {
