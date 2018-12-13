@@ -61,12 +61,10 @@ public class Move : MonoBehaviour
     }
 
     public void RotateUp(Vector2 direction, float rotSpeed) {
-        Debug.Log("Up");
         gameObject.transform.Rotate(direction.x * (rotSpeed * Time.deltaTime), 0, 0);
     }
 
     public void RotateDown(Vector2 direction, float rotSpeed) {
-        Debug.Log("Down");
         gameObject.transform.Rotate(direction.x * (rotSpeed * Time.deltaTime), 0, 0);
     }
 

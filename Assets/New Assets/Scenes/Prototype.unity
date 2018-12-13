@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 465417338}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 517266857}
   m_Layer: 0
   m_Name: golf-golf-ball-in-hole-1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -926,6 +926,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 1, z: 1}
   m_Center: {x: -0.000000014901161, y: 0, z: 0}
+--- !u!1 &812808461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1812636590350918, guid: 7fe21446bdec2b84c9522f52974a427e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1322874542}
+--- !u!114 &812808462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 812808461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94776bb2fcb25ec4fa92217fffd821dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  par: 3
+--- !u!114 &812808463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 812808461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1d8b5a35c05374784cbf9fe5bb7a3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &917159737
 Prefab:
   m_ObjectHideFlags: 0
@@ -935,15 +963,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4080648764750506, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.052
+      value: 1.0582
       objectReference: {fileID: 0}
     - target: {fileID: 4080648764750506, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.74
+      value: -1.99
       objectReference: {fileID: 0}
     - target: {fileID: 4080648764750506, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.5423
+      value: 0.5451
       objectReference: {fileID: 0}
     - target: {fileID: 4080648764750506, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1007,7 +1035,12 @@ Prefab:
       propertyPath: m_Center.y
       value: 0.42956156
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1160892963148340, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65780657319348470, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: de25dd7d7ab39fb44baddbf7ca3c0977, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1019975551
@@ -1097,6 +1130,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 121476818}
+  - {fileID: 1672864630}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1128,6 +1162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 10
   rb: {fileID: 1019975556}
+  hole: {fileID: 812808462}
 --- !u!114 &1019975558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1811,6 +1846,62 @@ Prefab:
       propertyPath: m_Center.z
       value: 16.32913
       objectReference: {fileID: 0}
+    - target: {fileID: 4360842948318056, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458932593696418, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852317296049542, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100233284889678, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502724507988804, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1433527419430062, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004792706588314, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334750105080678, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980673320457312, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1266927668399880, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072462978090702, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044273676816488, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444308542852252, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1806848029071848, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65777615740787532, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
     - {fileID: 65708758476469418, guid: 7fe21446bdec2b84c9522f52974a427e, type: 2}
@@ -1876,6 +1967,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000004, y: 1, z: 1.0000004}
   m_Center: {x: 0.000000007450581, y: 0, z: -0.0000019073486}
+--- !u!1 &1672864629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672864630}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1672864630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1672864629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1019975555}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1710684505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1044273676816488, guid: 7fe21446bdec2b84c9522f52974a427e,
@@ -1998,7 +2117,7 @@ GameObject:
   - component: {fileID: 2014154553}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2092,3 +2211,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 1, z: 1}
   m_Center: {x: -0.000000059604645, y: 0, z: -0.0000019073486}
+--- !u!1 &2103240055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1160892963148340, guid: de25dd7d7ab39fb44baddbf7ca3c0977,
+    type: 2}
+  m_PrefabInternal: {fileID: 917159737}
+--- !u!65 &2103240056
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103240055}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.12197453, z: 1}
+  m_Center: {x: 0, y: 0.40199426, z: 0}
