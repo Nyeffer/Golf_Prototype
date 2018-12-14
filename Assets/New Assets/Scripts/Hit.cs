@@ -79,7 +79,7 @@ public class Hit : MonoBehaviour {
 			Debug.Log(hole.GetPar().ToString());
 			Debug.Log(score);
 			WhatScore(score, hole.GetPar());
-			SceneManager.LoadScene("Prototype", LoadSceneMode.Single);
+			SceneManager.LoadScene("Hole_1", LoadSceneMode.Single);
 			Debug.Log(WhatScore(score, hole.GetPar()));
 		}
 	}
