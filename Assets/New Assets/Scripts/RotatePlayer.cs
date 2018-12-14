@@ -25,11 +25,9 @@ public class RotatePlayer : MonoBehaviour, IDragHandler, IPointerUpHandler, IPoi
 
 	void Update() {
 		if(InputDirection.x > 0) {
-			Debug.Log("MovingF");
 			movement.RotateRight(new Vector2(InputDirection.x, InputDirection.z), rotSpeed);
 		}
 		if(InputDirection.x < 0) {
-			Debug.Log("MovingF");
 			movement.RotateLeft(new Vector2(InputDirection.x, InputDirection.z), rotSpeed);
 		}
 	}

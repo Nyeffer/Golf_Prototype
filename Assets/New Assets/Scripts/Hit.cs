@@ -18,6 +18,7 @@ public class Hit : MonoBehaviour {
 	
 	// Private Variables
 	private int score = 0;
+	private int stroke = 0;
 	private float powerCounter = 0.0f;
 	private bool readyToFire = false;
 	private bool pos = true;
@@ -60,6 +61,8 @@ public class Hit : MonoBehaviour {
 	public void Shoot() {
 		force = powerCounter;
 		rb.AddForce(rb.gameObject.transform.forward * force, ForceMode.Impulse);
+		score += 1;
+		stroke += 1;
 		readyToFire = false;
 	}
 
@@ -67,11 +70,17 @@ public class Hit : MonoBehaviour {
 		readyToFire = true;
 	}
 
+	public int GetStroke() {
+		return stroke;
+	}
+
 	void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Goal") {
-			Debug.Log(WhatScore(score, hole.GetPar()));
+			Debug.Log(hole.GetPar().ToString());
+			Debug.Log(score);
 			WhatScore(score, hole.GetPar());
 			SceneManager.LoadScene("Prototype", LoadSceneMode.Single);
+			Debug.Log(WhatScore(score, hole.GetPar()));
 		}
 	}
 
