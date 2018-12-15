@@ -10,6 +10,7 @@ public class GroundCheck : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Ground") {
 			isGrounded = true;
+			ball.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
 			ball.GetComponent<Hit>().SetFiring(false);
 		}
 	}
