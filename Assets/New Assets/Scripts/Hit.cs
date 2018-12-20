@@ -84,6 +84,12 @@ public class Hit : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit(Collider col) {
+		if(col.gameObject.tag == "DeathZone") {
+			SceneManager.LoadScene("Hole_9", LoadSceneMode.Single);
+		}
+	}
+
 	public void SetFiring(bool newVal) {
 		firing = newVal;
 	}
