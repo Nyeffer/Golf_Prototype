@@ -15,6 +15,8 @@ public class Hit : MonoBehaviour {
 	public GameObject currentlyFiring;
 	public Slider powerMeter;
 	public int multiplier = 10;
+	public string reset = " ";
+	public string after = " ";
 	
 	// Private Variables
 	private int score = 0;
@@ -79,14 +81,20 @@ public class Hit : MonoBehaviour {
 			Debug.Log(hole.GetPar().ToString());
 			Debug.Log(score);
 			WhatScore(score, hole.GetPar());
-			SceneManager.LoadScene("Hole_1", LoadSceneMode.Single);
+			SceneManager.LoadScene(after, LoadSceneMode.Single);
 			Debug.Log(WhatScore(score, hole.GetPar()));
+		}
+	}
+
+	void OnCollisionEnter(Collision col) {
+		if(col.gameObject.tag == "Death") {
+			SceneManager.LoadScene(reset, LoadSceneMode.Single);
 		}
 	}
 
 	void OnTriggerExit(Collider col) {
 		if(col.gameObject.tag == "DeathZone") {
-			SceneManager.LoadScene("Hole_9", LoadSceneMode.Single);
+			SceneManager.LoadScene(reset, LoadSceneMode.Single);
 		}
 	}
 

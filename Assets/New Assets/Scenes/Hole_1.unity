@@ -2744,6 +2744,8 @@ MonoBehaviour:
   currentlyFiring: {fileID: 459098270}
   powerMeter: {fileID: 1106845277}
   multiplier: 10
+  reset: Hole_1
+  after: Hole_9
 --- !u!114 &1019975558
 MonoBehaviour:
   m_ObjectHideFlags: 0
