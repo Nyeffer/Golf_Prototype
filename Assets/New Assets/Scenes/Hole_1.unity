@@ -1982,7 +1982,7 @@ MonoBehaviour:
   par: {fileID: 453838363}
   hole: {fileID: 158685268}
   stroke: {fileID: 1927925076}
-  player: {fileID: 0}
+  player: {fileID: 1019975557}
 --- !u!1001 &642058761
 Prefab:
   m_ObjectHideFlags: 0
