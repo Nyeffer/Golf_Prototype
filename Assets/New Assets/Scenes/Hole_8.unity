@@ -1096,9 +1096,10 @@ GameObject:
   - component: {fileID: 620422241}
   - component: {fileID: 620422243}
   - component: {fileID: 620422242}
+  - component: {fileID: 620422244}
   m_Layer: 0
   m_Name: polySurface36 (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1161,6 +1162,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 620422240}
   m_Mesh: {fileID: 4300000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+--- !u!65 &620422244
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 620422240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.531252, y: 0.35599312, z: 6.2064557}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &675577472
 Prefab:
   m_ObjectHideFlags: 0
@@ -1442,9 +1455,10 @@ GameObject:
   - component: {fileID: 833031616}
   - component: {fileID: 833031618}
   - component: {fileID: 833031617}
+  - component: {fileID: 833031619}
   m_Layer: 0
   m_Name: polySurface36 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1507,6 +1521,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 833031615}
   m_Mesh: {fileID: 4300000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+--- !u!65 &833031619
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833031615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.531251, y: 0.35599312, z: 6.2064567}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &843335805
 Prefab:
   m_ObjectHideFlags: 0
@@ -1840,6 +1866,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -2.71
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
   m_IsPrefabAsset: 0
@@ -1848,6 +1878,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 775c5ca12a7769b4e8861d545910ecbd,
     type: 3}
   m_PrefabInternal: {fileID: 1061243990}
+--- !u!1 &1061243992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 775c5ca12a7769b4e8861d545910ecbd,
+    type: 3}
+  m_PrefabInternal: {fileID: 1061243990}
+--- !u!65 &1061243993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1061243992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.531251, y: 0.3559931, z: 6.2064557}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1073299495
 Prefab:
   m_ObjectHideFlags: 0
@@ -2513,9 +2560,10 @@ GameObject:
   - component: {fileID: 1301280490}
   - component: {fileID: 1301280492}
   - component: {fileID: 1301280491}
+  - component: {fileID: 1301280493}
   m_Layer: 0
   m_Name: polySurface36 (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2578,6 +2626,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301280489}
   m_Mesh: {fileID: 4300000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+--- !u!65 &1301280493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301280489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.531251, y: 0.3559931, z: 6.2064557}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1312328977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,9 +2649,10 @@ GameObject:
   - component: {fileID: 1312328978}
   - component: {fileID: 1312328980}
   - component: {fileID: 1312328979}
+  - component: {fileID: 1312328981}
   m_Layer: 0
   m_Name: polySurface36 (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2654,6 +2715,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312328977}
   m_Mesh: {fileID: 4300000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+--- !u!65 &1312328981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312328977}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.531251, y: 0.35599312, z: 6.2064567}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1342494276
 Prefab:
   m_ObjectHideFlags: 0
