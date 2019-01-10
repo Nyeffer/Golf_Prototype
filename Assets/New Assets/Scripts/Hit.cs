@@ -78,11 +78,13 @@ public class Hit : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Goal") {
-			Debug.Log(hole.GetPar().ToString());
-			Debug.Log(score);
-			WhatScore(score, hole.GetPar());
-			SceneManager.LoadScene(after, LoadSceneMode.Single);
-			Debug.Log(WhatScore(score, hole.GetPar()));
+			if(hole.GetisPrac()) {
+				SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+			} else {
+				WhatScore(score, hole.GetPar());
+				SceneManager.LoadScene(after, LoadSceneMode.Single);
+				Debug.Log(WhatScore(score, hole.GetPar()));
+			}
 		}
 	}
 

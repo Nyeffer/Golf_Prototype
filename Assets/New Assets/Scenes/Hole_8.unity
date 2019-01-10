@@ -1770,6 +1770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   par: 3
   holeNum: 1
+  hole: 'Hole_8 '
 --- !u!54 &455096176
 Rigidbody:
   m_ObjectHideFlags: 0
