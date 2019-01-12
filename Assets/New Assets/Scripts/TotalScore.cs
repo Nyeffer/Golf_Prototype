@@ -6,31 +6,24 @@ using UnityEngine.UI;
 public class TotalScore : MonoBehaviour {
 
 	public Text[] score;
-
-	public int[] number;
+	public HoleType hole;
+	public Hit player;
 
 	void Start() {
-		PlayerPrefs.SetInt("hole1", PlayerPrefs.GetInt("hole1", 0));
-		PlayerPrefs.SetInt("hole2", PlayerPrefs.GetInt("hole2", 0));
-		PlayerPrefs.SetInt("hole3", PlayerPrefs.GetInt("hole3", 0));
-		PlayerPrefs.SetInt("hole4", PlayerPrefs.GetInt("hole4", 0));
-		PlayerPrefs.SetInt("hole5", PlayerPrefs.GetInt("hole5", 0));
-		PlayerPrefs.SetInt("hole6", PlayerPrefs.GetInt("hole6", 0));
-		PlayerPrefs.SetInt("hole7", PlayerPrefs.GetInt("hole7", 0));
-		PlayerPrefs.SetInt("hole8", PlayerPrefs.GetInt("hole8", 0));
-		PlayerPrefs.SetInt("hole9", PlayerPrefs.GetInt("hole9", 0));
+		PlayerPrefs.SetString(hole.holeName() + "Score", PlayerPrefs.GetString(hole.holeName() + "Score", " "));
 	}
 
 	void Update() {
-		score[0].text = PlayerPrefs.GetInt("hole1", 0).ToString();
-		score[1].text = PlayerPrefs.GetInt("hole2", 0).ToString();
-		score[2].text = PlayerPrefs.GetInt("hole3", 0).ToString();
-		score[3].text = PlayerPrefs.GetInt("hole4", 0).ToString();
-		score[4].text = PlayerPrefs.GetInt("hole5", 0).ToString();
-		score[5].text = PlayerPrefs.GetInt("hole6", 0).ToString();
-		score[6].text = PlayerPrefs.GetInt("hole7", 0).ToString();
-		score[7].text = PlayerPrefs.GetInt("hole8", 0).ToString();
-		score[8].text = PlayerPrefs.GetInt("hole9", 0).ToString();
+		PlayerPrefs.SetString(hole.holeName() + "Score", player.WhatScore((hole.GetPar() * -1) + player.GetStroke(), hole.GetPar()));
+		score[0].text = PlayerPrefs.GetString("Hole_1Score", " ");
+		score[1].text = PlayerPrefs.GetString("Hole_2Score", " ");
+		score[2].text = PlayerPrefs.GetString("Hole_3Score", " ");
+		score[3].text = PlayerPrefs.GetString("Hole_4Score", " ");
+		score[4].text = PlayerPrefs.GetString("Hole_5Score", " ");
+		score[5].text = PlayerPrefs.GetString("Hole_6Score", " ");
+		score[6].text = PlayerPrefs.GetString("Hole_7Score", " ");
+		score[7].text = PlayerPrefs.GetString("Hole_8Score", " ");
+		score[8].text = PlayerPrefs.GetString("Hole_9Score", " ");
 	}
 
 }

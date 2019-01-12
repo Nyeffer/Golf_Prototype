@@ -10,7 +10,7 @@ public class HoleType : MonoBehaviour {
 	public string hole = " ";
 
 	void Start() {
-		PlayerPrefs.SetInt(hole, PlayerPrefs.GetInt("hole8", 0));
+		PlayerPrefs.SetInt(hole, PlayerPrefs.GetInt(hole, 0));
 		if(PlayerPrefs.GetInt(hole, 0) != 0) {
 			isPractice = false;
 		} else {
@@ -28,5 +28,9 @@ public class HoleType : MonoBehaviour {
 
 	public int GetHoleID() {
 		return holeNum;
+	}
+
+	public string holeName() {
+		return hole;
 	}
 }
