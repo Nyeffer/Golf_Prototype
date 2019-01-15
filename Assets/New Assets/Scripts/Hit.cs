@@ -29,8 +29,10 @@ public class Hit : MonoBehaviour {
 	private bool firing = false;
 	private float counter = 0.0f;
 	private bool Done = false;
+	private Vector3 origPos;
 
 	void Start() {
+		origPos = gameObject.transform.position;
 		Done = false;
 		score = hole.GetPar() * -1;
 		beforeFiring.SetActive(true);
@@ -107,13 +109,15 @@ public class Hit : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if(col.gameObject.tag == "Death") {
-			SceneManager.LoadScene(reset, LoadSceneMode.Single);
+			rb.velocity = Vector3.zero;
+			gameObject.transform.position = origPos;
 		}
 	}
 
 	void OnTriggerExit(Collider col) {
 		if(col.gameObject.tag == "DeathZone") {
-			SceneManager.LoadScene(reset, LoadSceneMode.Single);
+			rb.velocity = Vector3.zero;
+			gameObject.transform.position = origPos;
 		}
 	}
 
