@@ -19,6 +19,7 @@ public class Hit : MonoBehaviour {
 	public string reset = " ";
 	public string after = " ";
 	public float timeToEnd = 3.0f;
+	public GameObject ball;
 	
 	// Private Variables
 	private int score = 0;
@@ -41,6 +42,7 @@ public class Hit : MonoBehaviour {
 	}
 
 	void Update() {
+		ball.transform.Rotate(ball.transform.localRotation * (rb.velocity * 10), Space.Self);
 		if(Done) {
 			beforeFiring.SetActive(false);
 			currentlyFiring.SetActive(false);
