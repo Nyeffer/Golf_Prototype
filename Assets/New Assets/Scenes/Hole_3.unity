@@ -3428,7 +3428,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100012, guid: 998027ad14a409248accb0f048e51ea5, type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: GoalFloor
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 998027ad14a409248accb0f048e51ea5, type: 3}
       propertyPath: m_TagString
@@ -3984,6 +3984,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: 998027ad14a409248accb0f048e51ea5,
     type: 3}
   m_PrefabInternal: {fileID: 1059526707}
+--- !u!65 &1272722574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272722573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.5312505, y: 6.0559897, z: 6.2064548}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!64 &1272722577
 MeshCollider:
   m_ObjectHideFlags: 0
