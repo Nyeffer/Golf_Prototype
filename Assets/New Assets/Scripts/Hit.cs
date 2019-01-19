@@ -91,16 +91,15 @@ public class Hit : MonoBehaviour {
 				currentlyFiring.SetActive(true);
 				if(pos) {
 					if(powerCounter < powerMeter.maxValue) {
-						powerCounter += (Time.deltaTime * multiplier);
+						powerCounter += ((Time.deltaTime * 3) * multiplier);
 						powerMeter.value = powerCounter;
 					} else {
-						
 						multiplier *= -1;
 						pos = false;
 					}
 				} else {
 					if(powerCounter > 0.0f) {
-						powerCounter += (Time.deltaTime * multiplier);
+						powerCounter += ((Time.deltaTime * 3) * multiplier);
 						powerMeter.value = powerCounter;
 					} else {
 						multiplier *= -1;
