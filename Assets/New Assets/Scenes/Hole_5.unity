@@ -985,6 +985,10 @@ Prefab:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+      propertyPath: m_TagString
+      value: GoalFloor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
   m_IsPrefabAsset: 0
@@ -1005,6 +1009,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.531251, y: 0.3559931, z: 6.2064557}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &285732088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 285732083}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.531251, y: 2.0773563, z: 6.2064557}
+  m_Center: {x: 0, y: 0.2609231, z: -7.663905e-10}
 --- !u!1001 &299668558
 Prefab:
   m_ObjectHideFlags: 0
@@ -1868,6 +1884,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 775c5ca12a7769b4e8861d545910ecbd,
     type: 3}
   m_PrefabInternal: {fileID: 1749140594}
+--- !u!65 &501765309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501765308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.7670193, y: 1.2080212, z: 18.700539}
+  m_Center: {x: 0.11788416, y: 0.06938934, z: 6.2470417}
 --- !u!65 &501765312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6169,6 +6197,10 @@ Prefab:
     - target: {fileID: 100000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}
+      propertyPath: m_TagString
+      value: GoalFloor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 775c5ca12a7769b4e8861d545910ecbd, type: 3}

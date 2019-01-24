@@ -74,13 +74,11 @@ public class Hit : MonoBehaviour {
 			if(counter < timeToEnd) {
 				counter += Time.deltaTime;
 			} else {
-				Debug.Log(hole.GetisPrac());
 				if(hole.GetisPrac()) {
 				SceneManager.LoadScene("Menu", LoadSceneMode.Single);
 				} else {
 					WhatScore(score, hole.GetPar());
 					SceneManager.LoadScene(after, LoadSceneMode.Single);
-					Debug.Log(WhatScore(score, hole.GetPar()));
 				}
 			}
 		} else {
@@ -106,6 +104,14 @@ public class Hit : MonoBehaviour {
 						pos = true;
 					}
 				}
+			}
+		}
+		if(stroke >= 12) {
+			if(hole.GetisPrac()) {
+				SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+			} else {
+				WhatScore(score, hole.GetPar());
+				SceneManager.LoadScene(after, LoadSceneMode.Single);
 			}
 		}
 	}
