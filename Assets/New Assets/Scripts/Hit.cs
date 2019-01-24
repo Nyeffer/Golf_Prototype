@@ -75,10 +75,13 @@ public class Hit : MonoBehaviour {
 				counter += Time.deltaTime;
 			} else {
 				if(hole.GetisPrac()) {
-				SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+				gameObject.GetComponent<PlayAd>().ShowDefaultAd();
 				} else {
 					WhatScore(score, hole.GetPar());
 					SceneManager.LoadScene(after, LoadSceneMode.Single);
+					if(after == "Hole_9") {
+						gameObject.GetComponent<PlayAd>().ShowDefaultAd();
+					}
 				}
 			}
 		} else {
@@ -188,6 +191,7 @@ public class Hit : MonoBehaviour {
 					case -4:
 						name = "Hole in One";
 						As.PlayOneShot(HoleInOneClip);
+						As.loop = false;
 					break;
 					case -3:
 						name = "Double Eagle";
@@ -228,6 +232,7 @@ public class Hit : MonoBehaviour {
 					case -3:
 						name = "Hole in One";
 						As.PlayOneShot(HoleInOneClip);
+						As.loop = false;
 					break;
 					case -2:
 						name = "Eagle";
@@ -265,6 +270,7 @@ public class Hit : MonoBehaviour {
 					case -2:
 						name = "Hole in One";
 						As.PlayOneShot(HoleInOneClip);
+						As.loop = false;
 					break;
 					case -1:
 						name = "Birdie";
