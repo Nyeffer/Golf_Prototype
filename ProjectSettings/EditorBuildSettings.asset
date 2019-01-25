@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scene/main menu.unity
-    guid: 44dd7f9c572658f439c93167510674a6
-  - enabled: 1
-    path: Assets/scene/test.unity
-    guid: db9ae8147172b9e41b548cb66e6923d0
+    path: Assets/New Assets/Scenes/Menu.unity
+    guid: e776784bb4c34fa488e6a5587f6993f2
   - enabled: 1
     path: Assets/New Assets/Scenes/Hole_1.unity
     guid: c927daa803ff99d499e9f461e230111e
@@ -38,7 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/New Assets/Scenes/Hole_9.unity
     guid: e2da699fba87d3448a3c69ae6c4935ac
-  - enabled: 1
-    path: Assets/New Assets/Scenes/Menu.unity
-    guid: e776784bb4c34fa488e6a5587f6993f2
   m_configObjects: {}
