@@ -824,7 +824,7 @@ MonoBehaviour:
   currentlyFiring: {fileID: 1554886947}
   Chart: {fileID: 587357657}
   powerMeter: {fileID: 89261556}
-  multiplier: 10
+  multiplier: 20
   reset: Hole_7
   after: Hole_8
   timeToEnd: 3

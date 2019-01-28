@@ -4267,7 +4267,7 @@ MonoBehaviour:
   currentlyFiring: {fileID: 154770955}
   Chart: {fileID: 560286273}
   powerMeter: {fileID: 2135824674}
-  multiplier: 10
+  multiplier: 20
   reset: Hole_6
   after: Hole_7
   timeToEnd: 3
@@ -7217,8 +7217,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892279377}
-  m_LocalRotation: {x: -0.13688399, y: 0.6560766, z: 0.1227237, w: 0.7319598}
-  m_LocalPosition: {x: -29.73055, y: -11.511036, z: 10.630878}
+  m_LocalRotation: {x: -0.060358457, y: 0.0017705885, z: 0.00012956506, w: 0.9981752}
+  m_LocalPosition: {x: 812.9917, y: -655.20844, z: -2319.1653}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
