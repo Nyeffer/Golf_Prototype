@@ -79,7 +79,7 @@ public class Hit : MonoBehaviour {
 				} else {
 					WhatScore(score, hole.GetPar());
 					SceneManager.LoadScene(after, LoadSceneMode.Single);
-					if(after == "Hole_9") {
+					if(after == "Menu") {
 						gameObject.GetComponent<PlayAd>().ShowDefaultAd();
 					}
 				}
